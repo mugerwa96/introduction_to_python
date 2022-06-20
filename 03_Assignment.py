@@ -2,20 +2,25 @@
 
 def checkLIst(list):
     if len(list) == 0:
-        return "List empty"
+        return 0
     elif len(list) == 4:
-        return "List Full"
-    else:
-        return 1
-
-
+       return 4
 # main code
-list = [2, 4, 5,4]
-if checkLIst(list):
-    print(checkLIst(list))
-    if(checkLIst(list)==1):
-        print("You can append")
-    else:
-        print("You cant append")
-else:
-    print("ok")
+list = []
+
+if checkLIst(list)==0:
+    i=0
+    while(i<5):
+        num=int(input("Enter number"))
+        list.append(num)
+        i+=1
+        if(i==4):
+            print("Maximum of elements reached")
+            print("ELEMENTS IN AN ARRAY")
+            for x in list:
+                print(x)
+elif checkLIst(list)==4:
+    print("List is full")
+
+
+
